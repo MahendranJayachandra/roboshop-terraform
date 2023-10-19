@@ -5,7 +5,7 @@ resource "aws_ssm_parameter" "foo" {
   value = each.value[type]
 }
 
-var "instances" {
+variable "instances" {
     default = {
         catalogue = {
             value = "http://catalogue-dev.learnskill.fun:8080/"
