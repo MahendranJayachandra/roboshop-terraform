@@ -1,8 +1,8 @@
 resource "aws_ssm_parameter" "foo" {
   for_each = var.instances
   name  = each.key
-  type  = each.value["value"]
-  value = each.value["type"]
+  type  = each.value[type]
+  value = each.value[value]
 }
 
 variable "instances" {
